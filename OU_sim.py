@@ -39,7 +39,7 @@ delta = 1
 sigma = .05
 
 
-# Generate GBM process vector -----------------------------------------------------------------------------------------
+# Generate GBM with Drift Process ----------------------------------------------------------------------------------------------
 for i in range(2,100):
 	sp.iloc[i,1] = sp.iloc[i-1,1] + mu*delta + sigma*math.sqrt(delta)*np.random.normal(0,1)
 	
@@ -47,7 +47,18 @@ for i in range(2,100):
 for i in range(2,100):
 	ret.iloc[i,1] = (sp.iloc[i,1]/sp.iloc[i-1,1])-1
 
-# Generate synthetic momentum process vector --------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------------------------------------
+# Generate Geometric GBM with Drift Process (This is a work in progress - Still Incomplete)
+
+#for i in range(2,100):
+#	sp.iloc[i,1] = sp.iloc[i-1,1] + mu*delta + sigma*math.sqrt(delta)*np.random.normal(0,1)
+	
+# Calculate GBM return vector
+# for i in range(2,100):
+#	ret.iloc[i,1] = (sp.iloc[i,1]/sp.iloc[i-1,1])-1
+
+
+# Generate synthetic momentum Process -------------------------------------------------------------------------------------
 
 spm.iloc[20,1] = 100
 lamda = .70
