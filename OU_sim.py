@@ -1,6 +1,6 @@
 # This will simualte random paths using an OU Process
 
-# This file has been updated on 11/26/2016 to include the simulation and graphs of additional processes. 
+# This file has been updated on 01/06/2017 to include geometric brownian motion and the file has been renamed on github. 
 
 import datetime
 import sys
